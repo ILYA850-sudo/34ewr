@@ -1,10 +1,3 @@
-import Register from './Register';
-<Routes>
-  <Route path="/" element={<GasDeliveryPage />} />
-  <Route path="/history" element={<OrderHistory />} />
-  <Route path="/profile" element={<Profile />} />
-  <Route path="/register" element={<Register />} /> {/* Добавь эту строку */}
-</Routes>
 import React from 'react'
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import GasDeliveryPage from './GasDeliveryPage'
@@ -23,10 +16,7 @@ function App() {
         </div>
         <div className="nav-links">
           <div className="nav-links">
-  <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Головна</Link>
-  <Link to="/register" className={location.pathname === '/register' ? 'active' : ''}>Реєстрація</Link>
-  <Link to="/profile" className={location.pathname === '/profile' ? 'active' : ''}>Профіль</Link>
-</div>
+
           <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
             <i className="fas fa-home"></i> Головна
           </Link>
